@@ -49,6 +49,15 @@ python visualize_capture_paths.py \
 
 The script validates the required coordinate columns, skips invalid numeric rows, preserves equal axis scaling, and marks the start and end of each capture sequence.
 
+## Public Viewer Utilities
+
+The [`tools/`](./tools) directory contains cleaned, reusable versions of the project's reconstruction viewers:
+
+- [`visualize_colmap_and_3dgs.py`](./tools/visualize_colmap_and_3dgs.py): displays COLMAP sparse points, registered camera poses and frustums, optional source-image thumbnails, and the 3DGS PLY in one interactive Viser scene.
+- [`render_3dgs_viewer.py`](./tools/render_3dgs_viewer.py): rasterizes a standard 3DGS PLY interactively using CUDA, PyTorch, `gsplat`, Nerfview, and Viser.
+
+See [`tools/README.md`](./tools/README.md) for input requirements, installation notes, and example commands. Lightweight dependencies are listed in [`requirements-viewers.txt`](./requirements-viewers.txt); CUDA-enabled PyTorch and `gsplat` must be installed separately.
+
 ## System Pipeline
 
 ```text
