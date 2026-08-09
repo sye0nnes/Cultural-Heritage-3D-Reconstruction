@@ -8,6 +8,26 @@ This project investigates a practical 3D reconstruction pipeline for documenting
 
 The broader goal is to evaluate how aerial and ground-level observations can be combined to produce a detailed, navigable 3D representation of a real cultural heritage site.
 
+## Interactive 3D Results
+
+The reconstructed scenes can be explored directly in a web browser:
+
+| Capture source | Scene | Description |
+|---|---|---|
+| Drone | [Open `interval_1s` in SuperSplat](https://superspl.at/scene/9cdce44b) | Reconstruction generated from imagery sampled along the drone trajectory at approximately 1 frame per second |
+| Quadruped robot | [Open `waypoint` in SuperSplat](https://superspl.at/scene/6dd7a28b) | Reconstruction generated from images captured at planned ground-level waypoints |
+
+These interactive viewers provide direct qualitative evidence of the current reconstruction results and allow free-viewpoint inspection of coverage, geometry, and visible artifacts.
+
+## Sample Capture Metadata
+
+This public repository includes two small metadata samples used to document the image-acquisition paths:
+
+- [`poses(1IPS).csv`](./poses(1IPS).csv): 244 timestamped drone poses in the PX4 NED coordinate frame, including position, altitude, heading, and camera-orientation fields.
+- [`waypoint_dataset.csv`](./waypoint_dataset.csv): 147 quadruped-robot waypoint captures, including image filenames, local positions, yaw, scan layer, and camera tilt.
+
+The CSV files contain local trajectory and capture metadata only. Raw site images are not included.
+
 ## System Pipeline
 
 ```text
@@ -83,7 +103,7 @@ The project is currently in progress. The team is iterating on:
 - Evaluation methodology
 - Integration of drone and quadruped-robot observations
 
-Representative results and additional technical details will be added after the experiments are finalized and approved for public release.
+Additional technical details and evaluation results will be added after the experiments are finalized and approved for public release.
 
 ## Repository Scope
 
