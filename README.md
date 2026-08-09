@@ -105,5 +105,3 @@ No private team code, raw cultural-heritage dataset, model checkpoints, or inter
 - Type: Team capstone project
 - Domain: 3D Vision / Cultural Heritage Digitization
 - Status: Ongoing
-# Cultural-Heritage-3D-Reconstruction
-3D reconstruction of Korean cultural heritage using drone and quadruped-robot imagery with Gaussian Splatting.
