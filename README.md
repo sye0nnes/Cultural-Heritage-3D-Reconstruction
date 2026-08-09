@@ -28,6 +28,27 @@ This public repository includes two small metadata samples used to document the 
 
 The CSV files contain local trajectory and capture metadata only. Raw site images are not included.
 
+## Reproducible Capture-Path Visualization
+
+![Drone and quadruped-robot capture paths](./capture_paths.svg)
+
+The included dependency-free Python utility reads both public CSV files and regenerates the trajectory figure:
+
+```bash
+python visualize_capture_paths.py
+```
+
+Optional paths can be supplied explicitly:
+
+```bash
+python visualize_capture_paths.py \
+  --drone "poses(1IPS).csv" \
+  --waypoints waypoint_dataset.csv \
+  --output capture_paths.svg
+```
+
+The script validates the required coordinate columns, skips invalid numeric rows, preserves equal axis scaling, and marks the start and end of each capture sequence.
+
 ## System Pipeline
 
 ```text
