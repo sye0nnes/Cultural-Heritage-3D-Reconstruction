@@ -1,0 +1,9 @@
+imageio>=2.34
+nerfview
+numpy>=1.26
+plyfile>=1.0
+tqdm>=4.66
+viser>=0.2
+
+# Install a CUDA-enabled PyTorch build and a compatible gsplat version
+# separately by following their official installation instructions.
